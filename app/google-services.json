@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "514389845388",
+    "project_id": "personal-e-commerce-project",
+    "storage_bucket": "personal-e-commerce-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514389845388:android:756ca6787478d75d17a2a9",
+        "android_client_info": {
+          "package_name": "com.training.e_commerceandroidtraining"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA65IwZSoTubIaOPQvprI95_7h5-rC-4Gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

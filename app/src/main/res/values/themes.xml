@@ -18,17 +18,19 @@
 
     <style name="navigationScreenTheme" parent="Base.Theme.ECommerceAndroidTraining">
         <item name="android:statusBarColor">@color/teal_200</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <item name="android:navigationBarColor">@color/black</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1"> true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:navigationBarColor">@color/teal_200</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1"> false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/teal_200</item>
-        <item name="android:colorPrimaryDark">@color/teal_200</item>
+<!--        <item name="colorPrimary">@color/teal_200</item>-->
+<!--        <item name="android:colorPrimaryDark">@color/teal_200</item>-->
 <!--        <item name="android:windowBackground">@drawable/launch_background</item>-->
-        <item name="windowSplashScreenBackground">@color/teal_200</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_anim</item>
-        <item name="windowSplashScreenAnimationDuration">1000</item>
+<!--        <item name="windowSplashScreenBackground">@color/teal_200</item>-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_anim</item>-->
+<!--        <item name="windowSplashScreenAnimationDuration">1000</item>-->
         <!--        <item name="android:windowAnimationStyle"></item>-->
         <!--        <item name="colorAccent"></item>-->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+
     </style>
 </resources>
