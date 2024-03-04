@@ -11,22 +11,26 @@ import android.widget.TextView
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.NavHostFragment
 import com.training.e_commerceandroidtraining.utils.CrashLyticsUtils
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 
-class NavigationScreen : AppCompatActivity() {
+class AuthenticationScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         initSplashScreen()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_navigation_screen)
-       findViewById<TextView>(R.id.text).setOnClickListener{
-           Log.d("NavigationScreen" , "crash")
-           lifecycleScope.launch(Main) {
-               CrashLyticsUtils().sendLogsToCrashlytics("Crash button clicked" ,"button" , "clicked")
-           }
+        setContentView(R.layout.activity_authentication_screen)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+//       findViewById<TextView>(R.id.text).setOnClickListener{
+//           Log.d("NavigationScreen" , "crash")
+//           lifecycleScope.launch(Main) {
+//               CrashLyticsUtils().sendLogsToCrashlytics("Crash button clicked" ,"button" , "clicked")
+//           }
 //        throw java.lang.RuntimeException("test crash")
-       }
+//       }
     }
 
     private fun initSplashScreen(){
