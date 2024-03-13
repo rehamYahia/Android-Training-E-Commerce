@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.training.e_commerceandroidtraining.LoginFragment"
+        android:name="com.training.e_commerceandroidtraining.ui.fragments.auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.training.e_commerceandroidtraining.RegisterFragment"
+        android:name="com.training.e_commerceandroidtraining.ui.fragments.auth.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgetPasswordFragment"
-        android:name="com.training.e_commerceandroidtraining.ForgetPasswordFragment"
+        android:name="com.training.e_commerceandroidtraining.ui.fragments.auth.ForgetPasswordFragment"
         android:label="fragment_forget_password"
         tools:layout="@layout/fragment_forget_password" />
 </navigation>

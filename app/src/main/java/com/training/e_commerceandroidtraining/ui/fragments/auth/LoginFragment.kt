@@ -1,4 +1,4 @@
-package com.training.e_commerceandroidtraining
+package com.training.e_commerceandroidtraining.ui.fragments.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import com.training.e_commerceandroidtraining.LoginFragmentDirections
+import com.training.e_commerceandroidtraining.R
 
 
 class LoginFragment : Fragment() {
