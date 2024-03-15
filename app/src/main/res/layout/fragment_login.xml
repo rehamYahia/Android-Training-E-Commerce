@@ -38,29 +38,29 @@
             style="@style/lightText"
             />
 
-            <EditText
-                android:id="@+id/auth_email"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:hint="Your Email"
-                android:inputType="textEmailAddress"
-                android:background="@drawable/edit_text_shape"
-                />
+<!--            <EditText-->
+<!--                android:id="@+id/auth_email"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:hint="Your Email"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:background="@drawable/edit_text_shape"-->
+<!--                />-->
 
-        <EditText
-            android:id="@+id/auth_password"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:background="@drawable/edit_text_shape"
-            />
+<!--        <EditText-->
+<!--            android:id="@+id/auth_password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:hint="Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:background="@drawable/edit_text_shape"-->
+<!--            />-->
 
         <Button
             android:layout_width="match_parent"
