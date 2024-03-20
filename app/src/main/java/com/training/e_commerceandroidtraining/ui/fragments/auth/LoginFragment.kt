@@ -6,13 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.training.data.`repo-imp`.`repo-imp`.LoginRepositoryImp
+import com.training.domain.usecase.AuthUseCase
 import com.training.e_commerceandroidtraining.R
+import com.training.e_commerceandroidtraining.databinding.FragmentLoginBinding
+import com.training.e_commerceandroidtraining.viewmodel.LoginViewModel
+import com.training.e_commerceandroidtraining.viewmodel.LoginViewModelFactory
+import com.training.ecommerce.data.datasource.datastore.UserPreferencesDataSource
 
 
 class LoginFragment : Fragment() {
 
     val navController = findNavController()
+    private val loginViewModel:LoginViewModel by viewModels {
+        LoginViewModelFactory(authUseCase = AuthUseCase(LoginRepositoryImp( UserPreferencesDataSource(requireActivity()))))
+    }
+
+    private var _binding: FragmentLoginBinding ?= null
+    private val binding get() = _binding!!
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +38,11 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater , container , false)
+        return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,6 +51,11 @@ class LoginFragment : Fragment() {
 //            val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
 //            navController.navigate(action)
         }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
     }
 
 
