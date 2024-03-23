@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+<data>
+    <variable
+        name="viewmodel"
+        type="com.training.e_commerceandroidtraining.viewmodel.TestViewModel" />
+</data>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,7 +28,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:src="@drawable/logo" />
+                android:src="@drawable/logo"
+                android:contentDescription="logo"
+                />
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/darkText"
@@ -39,30 +47,35 @@
                 android:text="Sign in to continue" />
 
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:drawableStart="@drawable/ic_email"
                 android:hint="Your Email"
+                android:text="@={viewmodel.email}"
                 android:inputType="textEmailAddress"
-                style="@style/editTextStyle"
                 android:background="@drawable/edit_text_shape"
                 android:paddingStart="10dp"
+                android:padding="12dp"
                 />
 
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:drawableStart="@drawable/ic_password"
                 android:hint="Password"
+                android:text="@={viewmodel.password}"
                 android:inputType="textPassword"
-                style="@style/editTextStyle"
                 android:background="@drawable/edit_text_shape"
                 android:paddingStart="10dp"
+                android:padding="12dp"
                 />
 
             <Button
+                android:id="@+id/signin_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="30dp"
@@ -92,6 +105,7 @@
             </RelativeLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signinWithGoogle_btn"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text_shape"
                 android:drawableStart="@drawable/ic_google"
@@ -100,13 +114,12 @@
                  />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signinWithFacebook_btn"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_shape"
                 android:drawableStart="@drawable/ic_facebook"
                 android:text="Login with Facebook"
                 style="@style/socialMediaStyleBtn"
-
-
                 />
 
             <androidx.appcompat.widget.AppCompatTextView

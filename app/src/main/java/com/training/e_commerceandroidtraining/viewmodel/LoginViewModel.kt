@@ -14,12 +14,7 @@ class LoginViewModel(
 ) : ViewModel() {
 
 
-    fun getFakeData() {
-        viewModelScope.launch {
-            delay(5000)
-            Log.d(TAG, "getFakeData: ")
-        }
-    }
+
 
     companion object {
         private const val TAG = "LoginViewModel"

@@ -11,7 +11,6 @@ import android.view.animation.AnticipateInterpolator
 import androidx.activity.viewModels
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import com.training.data.`repo-imp`.`repo-imp`.LoginRepositoryImp
@@ -19,8 +18,6 @@ import com.training.domain.usecase.AuthUseCase
 import com.training.e_commerceandroidtraining.R
 import com.training.e_commerceandroidtraining.viewmodel.AuthViewModel
 import com.training.e_commerceandroidtraining.viewmodel.AuthViewModelFactory
-import com.training.e_commerceandroidtraining.viewmodel.LoginViewModel
-import com.training.e_commerceandroidtraining.viewmodel.LoginViewModelFactory
 import com.training.ecommerce.data.datasource.datastore.UserPreferencesDataSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

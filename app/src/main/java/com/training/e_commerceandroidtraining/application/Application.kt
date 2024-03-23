@@ -10,18 +10,15 @@ import io.reactivex.schedulers.Schedulers
 
 class MyApplication:android.app.Application() {
 
-    companion object{
-        private const val TAG ="NavigationScreen"
-    }
     override fun onCreate() {
         super.onCreate()
-        LisenToNetworkConnectivity()
+        lisenToNetworkConnectivity()
 
             }
     }
 
    @SuppressLint("CheckResult")
-   private fun LisenToNetworkConnectivity(){
+   private fun lisenToNetworkConnectivity(){
        ReactiveNetwork
            .observeInternetConnectivity()
            .subscribeOn(Schedulers.io())

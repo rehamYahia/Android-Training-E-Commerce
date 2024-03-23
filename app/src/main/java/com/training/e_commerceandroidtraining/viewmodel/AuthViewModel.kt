@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 
-class AuthViewModel(  val authUseCase: AuthUseCase) :ViewModel() {
- suspend fun IsLogin(): Flow<Boolean?> =  authUseCase.isUserLoggedIn()
+class AuthViewModel( private val authUseCase: AuthUseCase) :ViewModel() {
+ suspend fun isLogin(): Flow<Boolean?> =  authUseCase.isUserLoggedIn()
 
- suspend fun SaveLoginState(loginState:Boolean){
+ suspend fun saveLoginState(loginState:Boolean){
      viewModelScope.launch (Dispatchers.IO){
          authUseCase.saveIsLoggedIn(loginState)
      }
